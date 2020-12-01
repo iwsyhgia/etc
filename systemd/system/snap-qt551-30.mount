@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for qt551, revision 30
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/qt551_30.snap
+Where=/snap/qt551/30
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for color-picker, revision 10
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/color-picker_10.snap
+Where=/snap/color-picker/10
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

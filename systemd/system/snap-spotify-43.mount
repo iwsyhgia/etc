@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for spotify, revision 43
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/spotify_43.snap
+Where=/snap/spotify/43
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

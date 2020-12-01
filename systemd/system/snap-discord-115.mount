@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for discord, revision 115
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/discord_115.snap
+Where=/snap/discord/115
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
